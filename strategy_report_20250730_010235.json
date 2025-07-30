@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-07-30T01:02:35.369651",
+  "weather_data": {
+    "city": "jakarta_selatan",
+    "temperature": 32,
+    "condition": "Cerah Berawan",
+    "humidity": 65,
+    "is_hot": true,
+    "has_rain": false,
+    "timestamp": "2025-07-30 01:02"
+  },
+  "inventory_data": {
+    "ac_portable": {
+      "stock": 12,
+      "price": 2800000,
+      "daily_sales": 3,
+      "profit_margin": 15
+    },
+    "kipas_angin": {
+      "stock": 25,
+      "price": 380000,
+      "daily_sales": 5,
+      "profit_margin": 25
+    },
+    "payung_lipat": {
+      "stock": 15,
+      "price": 75000,
+      "daily_sales": 2,
+      "profit_margin": 40
+    },
+    "minuman_dingin": {
+      "stock": 50,
+      "price": 15000,
+      "daily_sales": 20,
+      "profit_margin": 30
+    }
+  },
+  "competitor_data": {
+    "kipas_angin_competitor_price": 350000,
+    "ac_portable_competitor_price": 2700000,
+    "payung_competitor_price": 80000,
+    "market_trend": "cooling_products_up_15%"
+  },
+  "ai_strategy": "Berikut adalah strategi komprehensif untuk seller Shopee berdasarkan data yang disediakan:\n\n**1. PRODUK PRIORITAS (ranking 1-3)**\n\nBerdasarkan market trend `cooling_products_up_15%` dan cuaca cerah berawan di Jakarta, produk prioritas adalah:\n\n1. **AC Portable**: Produk ini memiliki harga yang tinggi dan margin yang relatif rendah, namun masih memiliki stock yang terbatas (12 unit). Dengan cuaca cerah berawan, permintaan AC Portable mungkin meningkat.\n2. **Kipas Angin**: Produk ini memiliki stock yang relatif banyak (25 unit) dan margin yang cukup tinggi (25%). Harga kompetitor juga relatif rendah, sehingga perlu diperhatikan.\n3. **Payung**: Produk ini memiliki harga yang rendah dan margin yang tinggi (40%), namun stock yang terbatas (15 unit).\n\n**2. ANALISIS KOMPETITIF (vs harga kompetitor)**\n\n* AC Portable: Harga kita (Rp2,800,000) lebih tinggi daripada kompetitor (Rp2,700,000). Perlu dipertimbangkan untuk menurunkan harga atau memberikan promo.\n* Kipas Angin: Harga kita (Rp380,000) lebih tinggi daripada kompetitor (Rp350,000). Perlu dipertimbangkan untuk menurunkan harga atau memberikan promo.\n* Payung: Tidak ada data kompetitor, sehingga tidak perlu dilakukan analisis.\n\n**3. STRATEGI STOCK (berapa tambah untuk setiap produk)**\n\n* AC Portable: Tambah stock 5-10 unit untuk mengantisipasi peningkatan permintaan.\n* Kipas Angin: Tidak perlu tambah stock, karena stock yang ada sudah cukup banyak.\n* Payung: Tambah stock 5-10 unit untuk mengantisipasi peningkatan permintaan.\n\n**4. OPTIMASI HARGA (adjust berdasarkan kompetitor)**\n\n* AC Portable: Turunkan harga menjadi Rp2,750,000 ( Rp2,700,000 + Rp50,000) untuk meningkatkan daya saing.\n* Kipas Angin: Turunkan harga menjadi Rp360,000 (Rp350,000 + Rp10,000) untuk meningkatkan daya saing.\n\n**5. CAMPAIGN MARKETING (pesan yang powerful)**\n\n* \"Cuaca panas? Tidak lagi dengan produk cooling kami! AC Portable, Kipas Angin, dan Payung dengan harga spesial!\"\n* \"Beli sekarang dan dapatkan diskon 10% untuk semua produk cooling!\"\n\n**6. PROFIT PROJECTION (estimasi keuntungan tambahan)**\n\n* Dengan peningkatan permintaan 15% dan penambahan stock, estimasi keuntungan tambahan adalah:\n + AC Portable: Rp 15,000,000 (12 unit x Rp2,800,000 x 15% margin) + Rp 7,500,000 (5 unit x Rp2,750,000 x 15% margin) = Rp 22,500,000\n + Kipas Angin: Rp 7,500,000 (25 unit x Rp380,000 x 25% margin) + Rp 1,800,000 (5",
+  "execution_status": "pending"
+}
