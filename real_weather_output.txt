@@ -1,33 +1,35 @@
-🚀 SHOPEE AI STRATEGIST v6.0 - REAL-TIME WEATHER!
-======================================================================
+🚀 SHOPEE AI STRATEGIST v6.1 - REAL-TIME WEATHER + PROFIT CALCULATOR!
+===========================================================================
+📊 Data Source: CONTOH DATA (edit contoh_data.py untuk data toko Anda)
+===========================================================================
 🧪 TESTING REAL WEATHER CAPABILITY:
 🧪 TESTING MULTIPLE JAKARTA AREAS FOR REAL WEATHER
 =================================================================
 
 📍 Testing gambir (31.71.01.1001)
 📡 Getting REAL weather for gambir (code: 31.71.01.1001)
-✅ SUCCESS! Real-time weather: 27°C, Hujan Ringan
-   ✅ REAL DATA: 27°C, Hujan Ringan
+✅ SUCCESS! Real-time weather: 28°C, Cerah Berawan
+   ✅ REAL DATA: 28°C, Cerah Berawan
 
 📍 Testing kebayoran_baru (31.74.01.1001)
 📡 Getting REAL weather for kebayoran_baru (code: 31.74.01.1001)
-✅ SUCCESS! Real-time weather: 27°C, Hujan Ringan
-   ✅ REAL DATA: 27°C, Hujan Ringan
+✅ SUCCESS! Real-time weather: 28°C, Cerah Berawan
+   ✅ REAL DATA: 28°C, Cerah Berawan
 
 📍 Testing penjaringan (31.72.01.1001)
 📡 Getting REAL weather for penjaringan (code: 31.72.01.1001)
-✅ SUCCESS! Real-time weather: 27°C, Hujan Ringan
-   ✅ REAL DATA: 27°C, Hujan Ringan
+✅ SUCCESS! Real-time weather: 28°C, Cerah Berawan
+   ✅ REAL DATA: 28°C, Cerah Berawan
 
 📍 Testing grogol_petamburan (31.73.01.1001)
 📡 Getting REAL weather for grogol_petamburan (code: 31.73.01.1001)
-✅ SUCCESS! Real-time weather: 27°C, Hujan Ringan
-   ✅ REAL DATA: 27°C, Hujan Ringan
+✅ SUCCESS! Real-time weather: 28°C, Cerah Berawan
+   ✅ REAL DATA: 28°C, Cerah Berawan
 
 📍 Testing matraman (31.75.01.1001)
 📡 Getting REAL weather for matraman (code: 31.75.01.1001)
-✅ SUCCESS! Real-time weather: 27°C, Hujan Ringan
-   ✅ REAL DATA: 27°C, Hujan Ringan
+✅ SUCCESS! Real-time weather: 28°C, Cerah Berawan
+   ✅ REAL DATA: 28°C, Cerah Berawan
 
 🎉 REAL WEATHER AREAS WORKING:
   ✅ gambir: 31.71.01.1001
@@ -41,73 +43,114 @@
 🔄 REAL-TIME STRATEGIC ANALYSIS:
 ==================================================
 📡 Getting REAL weather for gambir (code: 31.71.01.1001)
-✅ SUCCESS! Real-time weather: 27°C, Hujan Ringan
-🤖 AI generating strategy with REAL-TIME weather data...
+✅ SUCCESS! Real-time weather: 28°C, Cerah Berawan
+🤖 AI generating strategy + calculating profit projections...
 
 📊 EXECUTIVE DASHBOARD - REAL-TIME
 ============================================================
 🌤️ REAL-TIME WEATHER STATUS:
   📍 Location: Gambir, Gambir
-  🌡️ Temperature: 27°C
-  ☁️ Condition: Hujan Ringan
-  💧 Humidity: 81%
-  💨 Wind: 3.7 km/h from W
+  🌡️ Temperature: 28°C
+  ☁️ Condition: Cerah Berawan
+  💧 Humidity: 78%
+  💨 Wind: 3 km/h from N
   📡 Data Source: 🌤️ BMKG API (REAL-TIME)
-  ⏰ Last Update: 2025-07-30 17:23:40
+  ⏰ Last Update: 2025-07-31 18:48:52
 
 💰 COMPETITIVE POSITION:
   Kipas: Kami Rp380,000 vs Kompetitor Rp350,000
   AC: Kami Rp2,800,000 vs Kompetitor Rp2,700,000
 
-🎯 AI STRATEGIC RECOMMENDATIONS (Based on Real Weather):
-============================================================
-**Analisis Kondisi Real-Time & Opportunity:**
-1. **Cuaca (Hujan Ringan, 27°C, Humidity 81%)**:
-   - Suhu cukup panas dengan kelembaban tinggi → **produk pendingin (AC Portable/Kipas) masih dibutuhkan** meski hujan (karena hujan hanya ringan dan kelembaban memperparah gerah).
-   - **AC Portable** lebih relevan untuk ruang tertutup dengan kelembaban tinggi, sedangkan **Kipas Angin** untuk sirkulasi udara cepat.
+🎯 AI STRATEGIC RECOMMENDATIONS + PROFIT PROJECTIONS:
+======================================================================
+**Strategi Actionable untuk Seller Shopee Jakarta (Real-Time Execution)**
 
-2. **Persaingan & Market Trend**:
-   - Cooling products naik **15%** → permintaan tinggi.
-   - Harga kompetitor lebih murah, tapi margin kita lebih tinggi (AC margin 15% vs Kipas 25%).
+### **1. Analisis Cuaca & Opportunity**
+- **Kondisi Cuaca:** Cerah berawan dengan suhu 28°C dan kelembapan 78% (gerah/cenderung panas).
+- **Peluang:**
+  - **AC Portable:** Permintaan bisa naik karena cuaca gerah, tetapi harga kompetitor lebih rendah.
+  - **Kipas Angin:** Lebih terjangkau dan margin lebih tinggi (25%), cocok untuk cuaca panas tidak ekstrem.
+  - **Market Trend:** Produk pendingin (cooling products) naik 15% — fokus pada promosi yang cepat.
+
+### **2. Pricing Strategy vs Kompetitor**
+**AC Portable:**
+- **Harga Saat Ini:** Rp2.800.000 (kompetitor Rp2.700.000).
+- **Strategi:**
+  - **Bundle Diskon:** Turunkan harga ke Rp2.750.000 + gratis tambahan (misal: gel pendingin atau pembersih AC) untuk meningkatkan nilai tambah.
+  - **Flash Sale:** Rp2.700.000 untuk 6 jam pertama hari ini (tekan FOMO + urgency).
+
+**Kipas Angin:**
+- **Harga Saat Ini:** Rp380.000 (kompetitor Rp350.000).
+- **Strategi:**
+  - **Price Match + Value Add:** Turunkan ke Rp350.000 (sama dengan kompetitor) TAMBAH gratis 1-year warranty atau kupon diskon Rp30.000 untuk pembelian berikutnya.
+  - **Upsell:** Tawarkan paket 2 kipas Rp650.000 (lebih murah per unit).
+
+### **3. Marketing Campaign Weather-Specific**
+**Target:** Maksimalkan visibilitas dengan keyword cuaca panas + urgency.
+- **Copywriting & Visual:**
+  - Gambar produk dengan overlay text: *"Gerah? AC Portable Ready Stock! DISKON CUACA PANAS 🔥"*
+  - Highlight: *"Kipas Angin 25% Margin, Gratis Ongkir Hari Ini!"*
+- **Taktik Campaign:**
+  - **Shopee Live:** Demo produk AC/kipas sambil tunjukkan suhu Jakarta real-time.
+  - **Voucher Spesifik:** Kode "PANAS10" untuk diskon Rp10.000 (min spend Rp300.000).
+  - **Google Ads/Instagram:** Target iklan dengan keyword *"AC murah Jakarta"*, *"kipas angin dingin"*.
+
+### **4. Inventory Optimization**
+- **Prioritaskan Kipas Angin:**
+  - Stock lebih besar (25 vs AC 12) dan margin lebih tinggi. Push kipas sebagai "solusi cepat panas".
+- **AC Portable:**
+  - Jika stok terjual cepat, siapkan pre-order dengan ETA 3 hari (kelola ekspektasi buyer).
+- **Safety Stock:**
+  - Sisakan 2-3 AC untuk harga normal (Rp2.800.000) setelah flash sale agar margin tidak drop terus.
+
+### **Execution Timeline (Hari Ini)**
+- **Pagi:** Update harga + bundle, launch flash sale AC.
+- **Siang:** Posting Instagram/Shopee Feed dengan cuaca Jakarta + promo.
+- **Sore:** Live session dengan compare produk vs kompetitor.
+- **Malam:** Monitor penjualan, adjust voucher jika perlu.
+
+**Kata Kunci:** Cuaca panas, urgency, bundle, value add. Fokus pada kipas angin dulu, AC dengan diskon terbatas!
 
 ---
 
-### **Actionable Strategy:**
+### **💰 PROFIT PROJECTION (Detail Calculation)**
 
-#### **1. Pricing Strategy (Beat Competitors Smartly)**
-- **AC Portable**:
-  - Harga kompetitor: **Rp2,700,000** (Rp100k lebih murah dari kita).
-  - **Taktik**:
-    - **Bundle discount** (e.g., "Beli AC Portable + Free Anti-Humidity Spray" dengan nilai tambah).
-    - **Harga promosi Rp2,750,000** (masih lebih tinggi dari kompetitor, tapi beri value tambah seperti "Garansi 2 Tahun").
-    - **Psikologi harga**: Tampilkan diskon dari Rp2,800,000 → Rp2,750,000 (terlihat lebih murah).
+**Current Performance:**
+- AC Portable: 12 unit × Rp2,800,000 × 15% = Rp5,040,000
+- Kipas Angin: 25 unit × Rp380,000 × 25% = Rp2,375,000
+- **Total Current**: Rp7,415,000
 
-- **Kipas Angin**:
-  - Harga kompetitor: **Rp350,000** (kita Rp380,000).
-  - **Taktik**:
-    - **Price match sambil naikkan nilai**: "Harga Rp350,000 + Free Ongkir" (kompetitor mungkin belum free ongkir).
-    - **Upsell**: Tawarkan kipas "3-in-1" (Angin + Mist + Humidifier) dengan harga Rp400,000.
+**Optimized Strategy:**
+- AC Portable: 12 unit × Rp2,750,000 × 12% = Rp3,960,000
+- Kipas Angin: 25 unit × Rp350,000 × 20% = Rp1,750,000
+- Weather Boost: +5% (humidity 78%)
+- Bundle Sales Bonus: +Rp1,500,000
+- **Total Optimized Daily**: Rp7,495,500
 
-#### **2. Inventory & Promotion Optimization**
-- **Prioritaskan AC Portable**:
-  - Stock hanya **12 unit** → targetkan pelanggan premium dengan **CTA "Stok Terbatas!"**.
-  - Gunakan **weather-based ad copy**:
-    > "Gerah karena hujan? AC Portable solusi ruang tetap sejuk! **Stok hampir habis!**"
-- **Kipas Angin**:
-  - Stock lebih banyak (25 unit) → bisa di-promo lebih agresif.
-  - **Flash sale**: "Kipas Angin 3x lebih cepat atasi gerah, **diskon 10% hari ini saja!**"
+**ROI Analysis:**
+- **Daily Potential**: Rp7,495,500
+- **Monthly Projection**: Rp224,865,000
+- **Improvement**: +1.1% vs current strategy
+- **Break-even Time**: 2-3 hari (dengan marketing budget Rp200,000)
 
-#### **3. Marketing Campaign (Relevant dengan Cuaca)**
-- **Target Audience**:
-  - Ibu rumah tangga (khawatir kelembaban tinggi) & pekerja WFH (butuh kenyamanan).
-- **Taktik Konten**:
-  - **Video pendek**: "Cara atasi gerah di rumah saat hujan pakai AC Portable/Kipas Angin
-============================================================
+**Action Items untuk Hari Ini:**
+1. 🏷️ Update harga AC ke Rp2,750,000 (dalam 2 jam)
+2. 📦 Siapkan bundle "AC + Anti-Humidity Spray"
+3. 📱 Launch campaign "Gerah Karena Hujan? AC Solusinya!"
+4. 🎯 Target iklan ke ibu rumah tangga & pekerja WFH
+5. ⚡ Flash sale kipas angin jam 19:00-21:00
+
+**Expected Results dalam 7 hari:**
+- Volume penjualan: +40%
+- Profit margin optimization: +25%
+- Market share gain vs competitor: +15%
+
+======================================================================
 
 ⚡ REAL-TIME BUSINESS INSIGHTS:
 ❄️ Moderate temperature → Balanced product strategy
-🌧️ RAIN CONDITIONS → Umbrella & waterproof products opportunity!
-💧 HIGH HUMIDITY → Dehumidifier & cooling products boost!
 
 📝 Data attribution: Data cuaca dari BMKG
 🚀 Next update in 30 minutes (real-time monitoring)
+
+💡 TIP: Edit file 'contoh_data.py' dengan data toko Anda yang sebenarnya!
