@@ -10,19 +10,19 @@ from contoh_data import CONTOH_COMPETITOR_DATA, CONTOH_INVENTORY_DATA
 
 class RealWeatherAgent:
     def __init__(self):
-        # Kode kelurahan Jakarta (real-time tested)
+        # Kode area Jakarta berdasarkan actual BMKG response (tested & verified)
         self.working_codes = {
-            'gambir': '31.71.01.1001',
-            'kebayoran_baru': '31.74.01.1001',
-            'penjaringan': '31.72.01.1001',
-            'grogol_petamburan': '31.73.01.1001',
-            'matraman': '31.75.01.1001'
+            'jakarta_pusat': '31.71.01.1001',    # Gambir, Gambir
+            'jakarta_selatan': '31.74.01.1001',  # Tebet Timur, Tebet  
+            'jakarta_utara': '31.72.01.1001',    # Penjaringan, Penjaringan
+            'jakarta_barat': '31.73.01.1001',    # Cengkareng Barat, Cengkareng
+            'jakarta_timur': '31.75.01.1001'     # Pisangan Baru, Matraman
         }
 
-    def get_real_weather(self, area='gambir'):
+    def get_real_weather(self, area='jakarta_pusat'):
         if area not in self.working_codes:
-            print(f"❌ Unknown area: {area}. Using gambir as default.")
-            area = 'gambir'
+            print(f"❌ Unknown area: {area}. Using jakarta_pusat as default.")
+            area = 'jakarta_pusat'
         kode = self.working_codes[area]
         url = f"https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4={kode}"
         print(f"📡 Getting REAL weather for {area} (code: {kode})")
@@ -94,7 +94,7 @@ class RealWeatherAgent:
         base_temp = 28 if 6 <= hour <= 18 else 25
         return {
             'area': area,
-            'location': f'{area.title()}, Jakarta',
+            'location': f'{area.replace("_", " ").title()}, Jakarta',
             'temperature': base_temp + random.randint(-2, 4),
             'condition': random.choice(['Cerah', 'Berawan', 'Cerah Berawan']),
             'humidity': random.randint(70, 90),
@@ -177,15 +177,50 @@ class StrategyAgent:
         )
     
     def generate_comprehensive_strategy(self, weather_data, inventory_data, competitor_data):
-        # First, generate main strategy
+        # Weather-based campaign logic
+        weather_condition = weather_data['condition'].lower()
+        temperature = weather_data['temperature']
+        humidity = weather_data['humidity']
+        
+        # Generate weather-appropriate campaign
+        if 'hujan' in weather_condition:
+            weather_campaign = "Gerah Karena Hujan? AC Solusinya!"
+            weather_context = "meski hujan"
+        elif 'cerah' in weather_condition:
+            weather_campaign = "Cuaca Cerah Bikin Gerah? AC Ready Stock!"
+            weather_context = "cuaca cerah dan panas"
+        elif 'berawan' in weather_condition:
+            weather_campaign = "Cuaca Lembap Bikin Gerah? AC Portable Solusinya!"
+            weather_context = "cuaca berawan dan lembap"
+        else:
+            weather_campaign = "Jakarta Panas & Lembap? AC Anti Gerah!"
+            weather_context = "cuaca Jakarta"
+            
+        # Temperature-based messaging
+        if temperature > 30:
+            temp_message = "panas terik"
+        elif temperature > 27:
+            temp_message = "cukup panas"
+        else:
+            temp_message = "hangat"
+            
+        # Humidity-based messaging  
+        if humidity > 80:
+            humidity_message = "sangat lembap"
+        elif humidity > 70:
+            humidity_message = "cukup lembap"
+        else:
+            humidity_message = "normal"
+
         strategy_prompt = f"""
 Kamu adalah AI strategis expert untuk seller Shopee Jakarta dengan DATA REAL-TIME!
 
 CUACA REAL-TIME JAKARTA: 
 - Area: {weather_data['area']} ({weather_data['location']})
-- Temperature: {weather_data['temperature']}°C
-- Condition: {weather_data['condition']}
-- Humidity: {weather_data['humidity']}%
+- Temperature: {weather_data['temperature']}°C ({temp_message})
+- Condition: {weather_data['condition']} 
+- Humidity: {weather_data['humidity']}% ({humidity_message})
+- Weather Context: {weather_context}
 
 INVENTORY & MARGIN:
 - AC Portable: Stock {inventory_data['ac_portable']['stock']}, Harga Rp{inventory_data['ac_portable']['price']:,}, Margin {inventory_data['ac_portable']['profit_margin']}%
@@ -196,15 +231,19 @@ KOMPETITOR:
 - AC kompetitor: Rp{competitor_data['ac_portable_competitor_price']:,}
 - Market trend: {competitor_data['market_trend']}
 
+CAMPAIGN YANG SESUAI CUACA: "{weather_campaign}"
+
 Buat strategi actionable yang mencakup:
-1. Analisis cuaca dan opportunity
+1. Analisis cuaca dan opportunity (sesuai kondisi {weather_data['condition']})
 2. Pricing strategy vs competitor
-3. Marketing campaign yang weather-specific
+3. Marketing campaign yang KONSISTEN dengan cuaca {weather_data['condition']}
 4. Inventory optimization
+
+PENTING: Pastikan semua campaign message SESUAI dengan kondisi cuaca {weather_data['condition']}, jangan mention hujan jika cerah!
 
 Fokus pada strategi yang bisa di-execute hari ini! Maksimal 800 kata.
 """
-        
+
         try:
             completion = self.client.chat.completions.create(
                 model="deepseek-ai/DeepSeek-V3",
@@ -214,10 +253,18 @@ Fokus pada strategi yang bisa di-execute hari ini! Maksimal 800 kata.
             )
             ai_strategy = completion.choices[0].message.content
         except Exception as e:
-            ai_strategy = f"❌ AI Strategy Error: {e}\n\n🧠 FALLBACK: Focus pada cooling products berdasarkan cuaca {weather_data['temperature']}°C dengan humidity {weather_data['humidity']}%"
+            ai_strategy = f"❌ AI Strategy Error: {e}\n\n🧠 FALLBACK: Focus pada cooling products berdasarkan cuaca {weather_data['condition']} {weather_data['temperature']}°C dengan humidity {weather_data['humidity']}%"
         
         # Generate manual profit calculation
         profit_calc = ProfitCalculator.calculate_profit_projection(inventory_data, competitor_data, weather_data)
+        
+        # Weather-consistent action items
+        action_items = f"""**Action Items untuk Hari Ini:**
+1. 🏷️ Update harga AC ke Rp2,750,000 (dalam 2 jam)
+2. 📦 Siapkan bundle "AC + Anti-Humidity Spray"
+3. 📱 Launch campaign "{weather_campaign}"
+4. 🎯 Target iklan ke ibu rumah tangga & pekerja WFH
+5. ⚡ Flash sale kipas angin jam 19:00-21:00"""
         
         # Combine strategy with detailed profit projection
         full_strategy = f"""{ai_strategy}
@@ -244,12 +291,7 @@ Fokus pada strategi yang bisa di-execute hari ini! Maksimal 800 kata.
 - **Improvement**: +{profit_calc['improvement_percentage']:.1f}% vs current strategy
 - **Break-even Time**: 2-3 hari (dengan marketing budget Rp200,000)
 
-**Action Items untuk Hari Ini:**
-1. 🏷️ Update harga AC ke Rp2,750,000 (dalam 2 jam)
-2. 📦 Siapkan bundle "AC + Anti-Humidity Spray"
-3. 📱 Launch campaign "Gerah Karena Hujan? AC Solusinya!"
-4. 🎯 Target iklan ke ibu rumah tangga & pekerja WFH
-5. ⚡ Flash sale kipas angin jam 19:00-21:00
+{action_items}
 
 **Expected Results dalam 7 hari:**
 - Volume penjualan: +40%
@@ -260,7 +302,7 @@ Fokus pada strategi yang bisa di-execute hari ini! Maksimal 800 kata.
         return full_strategy
 
 def main():
-    print("🚀 SHOPEE AI STRATEGIST v6.1 - REAL-TIME WEATHER + PROFIT CALCULATOR!")
+    print("🚀 SHOPEE AI STRATEGIST v6.3 - REAL-TIME WEATHER + SMART CAMPAIGNS!")
     print("=" * 75)
     print("📊 Data Source: CONTOH DATA (edit contoh_data.py untuk data toko Anda)")
     print("=" * 75)
@@ -280,8 +322,8 @@ def main():
         target_area = list(working_areas.keys())[0]
         print(f"\n🎯 Using {target_area} for strategic analysis...")
     else:
-        print(f"\n🎭 Using gambir (confirmed working) for analysis...")
-        target_area = 'gambir'
+        print(f"\n🎭 Using jakarta_pusat (confirmed working) for analysis...")
+        target_area = 'jakarta_pusat'
     
     print(f"\n🔄 REAL-TIME STRATEGIC ANALYSIS:")
     print("=" * 50)
@@ -290,7 +332,7 @@ def main():
     competitors = competitor_agent.analyze_competitors()
     inventory = inventory_agent.get_inventory()
     
-    print("🤖 AI generating strategy + calculating profit projections...")
+    print("🤖 AI generating weather-consistent strategy + calculating profit projections...")
     strategy = strategy_agent.generate_comprehensive_strategy(weather, inventory, competitors)
     
     print(f"\n📊 EXECUTIVE DASHBOARD - REAL-TIME")
